@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
-  namespace: fleetman
+  namespace: default
 spec:
   selector:
     matchLabels:
@@ -53,7 +53,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: fleetman-mongodb
-  namespace: fleetman
+  namespace: default
 spec:
   selector:
     app: mongodb
